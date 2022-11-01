@@ -1,4 +1,5 @@
 import 'package:first_flutter_project/contacts.dart';
+import 'package:first_flutter_project/db.dart';
 import 'package:first_flutter_project/gridview.dart';
 import 'package:first_flutter_project/gridview_extent.dart';
 import 'package:first_flutter_project/listview_builder_screen.dart';
@@ -13,55 +14,69 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       drawer: Drawer(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            const SizedBox(
-              height: 100,
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.green),
+              child: Center(
+                  child: Text(
+                'App Drawer',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+              )),
             ),
-            ElevatedButton(
-              onPressed: () {
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const ContactsScreen())));
               },
-              child: const Text('Contacts'),
+              title: const Text('Contacts'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const ListViewBuilderScreen())));
               },
-              child: const Text('ListView Builder'),
+              title: const Text('ListView Builder'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const GridViewDemo())));
               },
-              child: const Text('GridView Builder'),
+              title: const Text('GridView Builder'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const GridViewExtentScreen())));
               },
-              child: const Text('GridView Extent'),
+              title: const Text('GridView Extent'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => ListViewSeperated_Screen())));
               },
-              child: const Text('ListView Seperated'),
+              title: const Text('ListView Seperated'),
             ),
           ],
         ),

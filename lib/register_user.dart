@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:first_flutter_project/firstscreen.dart';
 
+// ignore: must_be_immutable
 class RegisterUser extends StatelessWidget {
   RegisterUser({super.key});
 

@@ -8,7 +8,7 @@ class ListViewBuilderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('movies'),
+        title: const Text('movies'),
       ),
       body: SafeArea(
         child: ListView.builder(

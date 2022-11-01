@@ -1,7 +1,8 @@
 import 'package:first_flutter_project/contacts.dart';
+import 'package:first_flutter_project/gridview.dart';
+import 'package:first_flutter_project/gridview_extent.dart';
 import 'package:first_flutter_project/listview_builder_screen.dart';
 import 'package:flutter/material.dart';
-
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -13,7 +14,7 @@ class FirstScreen extends StatelessWidget {
       drawer: Drawer(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             ElevatedButton(
@@ -21,18 +22,34 @@ class FirstScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: ((context) => ContactsScreen())));
+                        builder: ((context) => const ContactsScreen())));
               },
-              child: Text('Contacts'),
+              child: const Text('Contacts'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: ((context) => ListViewBuilderScreen())));
+                        builder: ((context) => const ListViewBuilderScreen())));
               },
-              child: Text('ListView Builder'),
+              child: const Text('ListView Builder'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => const GridViewDemo())));
+              },
+              child: const Text('GridView Builder'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const GridViewExtentScreen())));
+              },
+              child: const Text('GridView Extent'),
             ),
           ],
         ),
@@ -55,9 +72,9 @@ class FirstScreen extends StatelessWidget {
                       width: 150,
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(Icons.home_work),
-                            const Text('Home work'),
+                          children: const[
+                            Icon(Icons.home_work),
+                            Text('Home work'),
                           ]),
                     ),
                   ),
@@ -75,7 +92,7 @@ class FirstScreen extends StatelessWidget {
                         width: 150,
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            children: const[
                               Icon(Icons.home_work),
                               Text('Home work'),
                             ]),

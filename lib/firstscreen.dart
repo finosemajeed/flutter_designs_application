@@ -2,6 +2,7 @@ import 'package:first_flutter_project/contacts.dart';
 import 'package:first_flutter_project/gridview.dart';
 import 'package:first_flutter_project/gridview_extent.dart';
 import 'package:first_flutter_project/listview_builder_screen.dart';
+import 'package:first_flutter_project/listview_seperated_screen.dart';
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -37,8 +38,10 @@ class FirstScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => const GridViewDemo())));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const GridViewDemo())));
               },
               child: const Text('GridView Builder'),
             ),
@@ -50,6 +53,15 @@ class FirstScreen extends StatelessWidget {
                         builder: ((context) => const GridViewExtentScreen())));
               },
               child: const Text('GridView Extent'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => ListViewSeperated_Screen())));
+              },
+              child: const Text('ListView Seperated'),
             ),
           ],
         ),
@@ -72,7 +84,7 @@ class FirstScreen extends StatelessWidget {
                       width: 150,
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const[
+                          children: const [
                             Icon(Icons.home_work),
                             Text('Home work'),
                           ]),
@@ -92,7 +104,7 @@ class FirstScreen extends StatelessWidget {
                         width: 150,
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const[
+                            children: const [
                               Icon(Icons.home_work),
                               Text('Home work'),
                             ]),

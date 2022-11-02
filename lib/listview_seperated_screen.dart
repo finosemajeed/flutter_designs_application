@@ -22,7 +22,7 @@ class ListViewSeperated_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ListView seperated"),
+        title: const Text("ListView seperated"),
       ),
       body: ListView.separated(
         itemBuilder: ((context, index) => SizedBox(
@@ -54,7 +54,7 @@ class ListViewSeperated_Screen extends StatelessWidget {
               ),
             );
           }
-          return Divider(
+          return const Divider(
             height: 0,
           );
         },

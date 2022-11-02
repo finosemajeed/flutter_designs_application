@@ -1,9 +1,12 @@
 import 'package:first_flutter_project/contacts.dart';
-import 'package:first_flutter_project/db.dart';
 import 'package:first_flutter_project/gridview.dart';
+import 'package:first_flutter_project/gridview1.dart';
+import 'package:first_flutter_project/gridview_custom_screen.dart';
 import 'package:first_flutter_project/gridview_extent.dart';
 import 'package:first_flutter_project/listview_builder_screen.dart';
 import 'package:first_flutter_project/listview_seperated_screen.dart';
+import 'package:first_flutter_project/stack_screen.dart';
+import 'package:first_flutter_project/stack_screen2.dart';
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -77,6 +80,42 @@ class FirstScreen extends StatelessWidget {
                         builder: ((context) => ListViewSeperated_Screen())));
               },
               title: const Text('ListView Seperated'),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => GridViewScreen2())));
+              },
+              title: const Text('GridView Screen2'),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => Stack_Screen())));
+              },
+              title: const Text('Stack Screen'),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => StackScreen1())));
+              },
+              title: const Text('Stack Screen1'),
+            ),
+            ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => GridViewCustomScreen())));
+              },
+              title: const Text('GridViewCustom Screen'),
             ),
           ],
         ),

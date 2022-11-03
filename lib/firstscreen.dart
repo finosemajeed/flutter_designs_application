@@ -8,6 +8,7 @@ import 'package:first_flutter_project/listview_seperated_screen.dart';
 import 'package:first_flutter_project/stack_screen.dart';
 import 'package:first_flutter_project/stack_screen2.dart';
 import 'package:first_flutter_project/staggered_gridd.dart';
+import 'package:first_flutter_project/table_screen.dart';
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -127,6 +128,17 @@ class FirstScreen extends StatelessWidget {
                         builder: ((context) => StaggeredGridScreen())));
               },
               title: const Text('StaggeredGrid Screen'),
+            ),
+
+             ListTile(
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => TableScreen())));
+              },
+              title: const Text('Table Screen'),
             ),
           ],
         ),

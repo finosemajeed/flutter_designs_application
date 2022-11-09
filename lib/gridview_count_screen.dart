@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class GridView_Count_Screen extends StatelessWidget {
   const GridView_Count_Screen({super.key});
 
@@ -14,7 +15,7 @@ class GridView_Count_Screen extends StatelessWidget {
         shrinkWrap: true,
         children: List.generate(20, (index) {
           return Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(

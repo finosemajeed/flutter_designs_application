@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:first_flutter_project/home.dart';
+import 'package:first_flutter_project/login_screen.dart';
 import 'package:first_flutter_project/register_user.dart';
+import 'package:lottie/lottie.dart';
 
 class StartUpScreen extends StatelessWidget {
   const StartUpScreen({super.key});
@@ -26,7 +27,8 @@ class StartUpScreen extends StatelessWidget {
             style: TextStyle(color: Colors.grey),
           ),
           SizedBox(
-            child: Image.asset('assets/images/illustration.jpg'),
+            child: Lottie.asset('assets/animations/loading_animation.json'),
+            // Image.asset('assets/images/illustration.jpg'),
           ),
           const SizedBox(
             height: 30,
@@ -40,8 +42,10 @@ class StartUpScreen extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const HomePage()));
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen()));
               },
               child: const Text('Login')),
           const SizedBox(

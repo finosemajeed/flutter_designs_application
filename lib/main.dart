@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:first_flutter_project/firstscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter_project/startup_screen.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Splash(),
+  runApp(MaterialApp(
+    home: FirstScreen(),
+    // home: Splash(),
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -22,8 +24,8 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: ((context) => const StartUpScreen())));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: ((context) => StartUpScreen())));
     });
   }
 

@@ -21,7 +21,7 @@ class StackScreen1 extends StatelessWidget {
                 height: 30,
                 width: 60,
                 color: Colors.black87,
-                child: Text(
+                child: const Text(
                   textAlign: TextAlign.center,
                   'Joker',
                   style: TextStyle(color: Colors.white),

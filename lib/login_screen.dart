@@ -3,14 +3,14 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:first_flutter_project/firstscreen.dart';
 import 'package:first_flutter_project/register_user.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     var formkey = GlobalKey<FormState>();
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     final isValid = formkey.currentState!.validate();
                     if (isValid) {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const FirstScreen()));
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(height: 20),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                               builder: (context) => RegisterUser()));

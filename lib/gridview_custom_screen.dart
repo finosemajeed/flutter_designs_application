@@ -9,7 +9,7 @@ class GridViewCustomScreen extends StatelessWidget {
       appBar: AppBar(),
       body: GridView.custom(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         childrenDelegate: SliverChildBuilderDelegate(((context, index) {
           return Card(
             child: Image.asset('assets/movie/movie3.jfif'),

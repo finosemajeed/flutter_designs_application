@@ -1,5 +1,8 @@
 import 'package:first_flutter_project/alert_dialogbox_screen.dart';
 import 'package:first_flutter_project/align_widget_screen.dart';
+import 'package:first_flutter_project/animation_screen.dart';
+import 'package:first_flutter_project/bottom_sheet_screen.dart';
+import 'package:first_flutter_project/carousal_slider_screen.dart';
 import 'package:first_flutter_project/check_box_screen.dart';
 import 'package:first_flutter_project/contacts.dart';
 import 'package:first_flutter_project/custom_sliver_appbar.dart';
@@ -314,7 +317,41 @@ class FirstScreen extends StatelessWidget {
                     MaterialPageRoute(
                         builder: ((context) => const AlignWidgetScreen())));
               },
-              title: const Text('Show alert box Screen1'),
+              title: const Text('Show alert box while exititing app Screen1'),
+            ),
+            const Divider(),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const CarousalSliderScreen())));
+              },
+              title: const Text('Carousal slider Screen'),
+            ),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const BottomSheetScreen())));
+              },
+              title: const Text('BottomSheet Screen'),
+            ),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const AnimationScreen())));
+              },
+              title: const Text('Animation Screen'),
             ),
           ],
         ),

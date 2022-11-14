@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:first_flutter_project/firstscreen.dart';
 import 'package:first_flutter_project/product_list_screen.dart';
+import 'package:first_flutter_project/product_view_page.dart';
 import 'package:first_flutter_project/product_view_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter_project/startup_screen.dart';
@@ -13,6 +14,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
       'productView': (context) => ProductViewScreen(),
+      'productViewPage': (context) => ProductviewPage(),
     },
   ));
 }

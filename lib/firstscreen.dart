@@ -19,6 +19,7 @@ import 'package:first_flutter_project/listview_seperated_screen.dart';
 import 'package:first_flutter_project/lottie_animation.dart';
 import 'package:first_flutter_project/product_list_screen.dart';
 import 'package:first_flutter_project/product_page.dart';
+import 'package:first_flutter_project/profile_screen2.dart';
 import 'package:first_flutter_project/profile_ui_screen.dart';
 import 'package:first_flutter_project/stack_screen.dart';
 import 'package:first_flutter_project/stack_screen2.dart';
@@ -392,6 +393,18 @@ class FirstScreen extends StatelessWidget {
                     MaterialPageRoute(builder: ((context) => ProductPage())));
               },
               title: const Text('ProductPage Screen'),
+            ),
+            Divider(),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => ProfileScreen2())));
+              },
+              title: const Text('Profile page2 Screen'),
             ),
           ],
         ),

@@ -1,8 +1,10 @@
 import 'package:first_flutter_project/alert_dialogbox_screen.dart';
 import 'package:first_flutter_project/align_widget_screen.dart';
 import 'package:first_flutter_project/animation_screen.dart';
+import 'package:first_flutter_project/blog_ui_screen.dart';
 import 'package:first_flutter_project/bottom_sheet_screen.dart';
 import 'package:first_flutter_project/carousal_slider_screen.dart';
+import 'package:first_flutter_project/chat_bubble.dart';
 import 'package:first_flutter_project/check_box_screen.dart';
 import 'package:first_flutter_project/contacts.dart';
 import 'package:first_flutter_project/custom_sliver_appbar.dart';
@@ -405,6 +407,26 @@ class FirstScreen extends StatelessWidget {
                         builder: ((context) => ProfileScreen2())));
               },
               title: const Text('Profile page2 Screen'),
+            ),
+            Divider(),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => BlogUiScreen())));
+              },
+              title: const Text('Blog Ui screen'),
+            ),
+            Divider(),
+            ListTile(
+              dense: true,
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => ChatPage())));
+              },
+              title: const Text('ChatPage screen'),
             ),
           ],
         ),

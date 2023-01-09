@@ -31,7 +31,7 @@ class AlerDialogueBoxScreen extends StatelessWidget {
                       title: const Text('Alert Dialog'),
                       content: const Text('Do you really want to delete?'),
                       actions: [
-                        TextButton(onPressed: () {}, child: const Text('yes')),
+                        TextButton(onPressed: () {}, child: const Text('no')),
                         TextButton(
                             onPressed: () {
                               Navigator.pop(context);

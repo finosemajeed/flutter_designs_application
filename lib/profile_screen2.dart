@@ -44,12 +44,12 @@ class ProfileScreen2 extends StatelessWidget {
               ],
             ),
             Text(
-              'Name',
+              'Jerrin',
               style: TextStyle(
                 fontSize: 24,
               ),
             ),
-            Text('userId'),
+            Text('@jerrin_b'),
             Text('Mobile App Developer and Open source Enthusiastic'),
             Padding(
               padding: const EdgeInsets.all(8.0),
